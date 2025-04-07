@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea React Native</title>
+</head>
+<body>
+    <h1 class="nombre"></h1>
+    <span>
+        Tu nornbre
+        <input type="text" name="input" id="">
+    </span>
+    <button onclick="actualizarNombre()" >Enviar</button>
+    
+</body>
+<script>
+    const actualizarNombre = async () =>{
+        const nombre =  document.querySelector("[name='input']").value
+        fetch("http://localhost:3000/saludo/" + nombre,{
+            method:"get",
+            mode:"cors"
+        }).then((prom)=>prom.text().then((text)=> document.querySelector(".nombre").textContent = text))
+    }
+</script>
+</html>
