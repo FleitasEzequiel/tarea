@@ -16,5 +16,23 @@ Encender el servidor :
 node server.js
 ```
 
-## Página Web
- Abrir el archivo index.html , no es tan difícil
+## Cliente
+
+Navega a la carpeta del cliente:
+
+```bash
+cd client
+```
+Instalar las dependencias:
+
+```bash
+npm install
+```
+
+Encender el cliente :
+```bash
+npm run dev
+```
+
+Abrir la página 
+>https://localhost:5173
